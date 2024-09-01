@@ -1,13 +1,13 @@
 ---
-import ContactForm from "@components/ContactForm.astro";
-import { getCollection } from "astro:content";
-import Container from "@components/Container.astro";
-import PageLayout from "@layouts/PageLayout.astro";
 import ArrowCard from "@components/ArrowCard.astro";
+import ContactForm from "@components/ContactForm.astro";
+import Container from "@components/Container.astro";
 import Link from "@components/Link.astro";
-import { dateRange } from "@lib/utils";
-import { SITE, HOME, SOCIALS } from "@consts";
 import PersonalityAssesmentCard from "@components/PersonalityAssesmentCard.astro";
+import { HOME, SITE, SOCIALS } from "@consts";
+import PageLayout from "@layouts/PageLayout.astro";
+import { dateRange } from "@lib/utils";
+import { getCollection } from "astro:content";
 
 const personalityAssesments = await getCollection("personality-tests");
 
