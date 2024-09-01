@@ -1,4 +1,5 @@
 ---
+import ContactForm from '@components/ContactForm.astro'
 import { getCollection } from "astro:content";
 import Container from "@components/Container.astro";
 import PageLayout from "@layouts/PageLayout.astro";
@@ -108,7 +109,7 @@ const work = await Promise.all(
         <ul class="flex flex-col gap-4">
           {
             personalityAssesments.map((entry) => (
-              <li>
+              <li class="mt-4">
                 <PersonalityAssesmentCard entry={entry} />
               </li>
             ))
@@ -120,12 +121,12 @@ const work = await Promise.all(
         <h5 class="font-semibold text-black dark:text-white text-xl">
           Let's Connect!
         </h5>
-        <article>
+        <div>
           <p>
             If you want to get in touch with me about something or just to say
             hi, reach out on social media or send me an email.
           </p>
-        </article>
+        </div>
 
         <ul class="flex flex-wrap gap-2">
           {
@@ -144,66 +145,10 @@ const work = await Promise.all(
           }
         </ul>
 
-        <form
-          id="contact-form"
-          name="contact-form"
-          method="POST"
-          data-netlify="true"
-        >
-          <div>
-            <p class="text-xl font-semibold">Reach Out</p>
-            <p class="text-sm">
-              Submit your information and inquiry below, and, as long as it's
-              not spammy or <em>really</em> stupid, I'll get back to you as soon
-              as I can. Promise 🤞.
-            </p>
-          </div>
-          <div class="flex flex-col">
-            <label for="full-name">First & Last Name</label>
-            <input
-              type="text"
-              id="full-name"
-              name="full-name"
-              autocomplete="name"
-              placeholder="Jamie Doe"
-            />
-          </div>
-          <div class="flex flex-col">
-            <label for="email">Email</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              autocomplete="email"
-              placeholder="jaime@doemail.com"
-            />
-          </div>
-          <div class="flex flex-col">
-            <label for="inquiry">What's your inquiry?</label>
-            <textarea
-              name="inquiry"
-              id="inquiry"
-              maxlength="2000"
-              placeholder="What is the meaning of life?" />
-          </div>
-          <input type="submit" class="font-semibold" />
-        </form>
+        <ContactForm />
       </section>
     </div>
   </Container>
 </PageLayout>
 
-<style>
-  #contact-form {
-    @apply border rounded-lg border-black/15 dark:border-white/20 p-4 flex flex-col gap-y-4;
 
-    & label {
-      @apply font-semibold;
-    }
-
-    & input,
-    textarea {
-      @apply rounded py-1 px-2 bg-transparent border border-black/15 dark:border-white/20 text-sm mt-1;
-    }
-  }
-</style>

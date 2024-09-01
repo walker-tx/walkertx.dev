@@ -1,6 +1,6 @@
 ---
 testName: Character Strengths 
-description: Positive parts of your personality that impact how you think, feel and behave.
+description: VIA Character Strengths uncover positive parts of your personality that impact how you think, feel and behave.
 link: /StrengthsProfile-Walker-Lockard.pdf
 ---
 

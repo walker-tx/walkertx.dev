@@ -1,0 +1,70 @@
+<form id="contact-form" name="contact-form" method="POST" data-netlify="true" netlify-honeypot="bait">
+  <p class="hidden">
+    <label for="bait">Bait</label>
+    <input type="text" name="bait" id="bait">
+  </p>
+  <div>
+    <p class="text-xl font-semibold">Reach Out</p>
+    <p class="text-sm">
+      Submit your information and inquiry below, and, as long as it's not spammy
+      or <em>really</em> stupid, I'll get back to you as soon as I can. Promise 🤞.
+    </p>
+  </div>
+  <div class="flex flex-col">
+    <label for="full-name">First & Last Name</label>
+    <input
+      type="text"
+      id="full-name"
+      name="full-name"
+      autocomplete="name"
+      placeholder="Jamie Doe"
+    />
+  </div>
+  <div class="flex flex-col">
+    <label for="email">Email</label>
+    <input
+      type="email"
+      id="email"
+      name="email"
+      autocomplete="email"
+      placeholder="jaime@doemail.com"
+    />
+  </div>
+  <div class="flex flex-col">
+    <label for="inquiry">What's your inquiry?</label>
+    <textarea
+      name="inquiry"
+      id="inquiry"
+      maxlength="2000"
+      placeholder="What is the meaning of life?"></textarea>
+    <span id="letter-count" class="text-xs ml-auto opacity-50">0/2000</span>
+  </div>
+  <input type="submit" class="font-semibold" />
+</form>
+
+<style>
+  #contact-form {
+    @apply border rounded-lg border-black/15 dark:border-white/20 p-4 flex flex-col gap-y-4;
+
+    & label {
+      @apply font-semibold;
+    }
+
+    & input,
+    textarea {
+      @apply rounded py-1 px-2 bg-transparent border border-black/15 dark:border-white/20 text-sm mt-1;
+    }
+  }
+</style>
+
+<script>
+  document.getElementById("inquiry")?.addEventListener("input", (e) => {
+    if (!e.currentTarget) return;
+    const { value } = e.currentTarget as HTMLTextAreaElement;
+
+    const counter = document.getElementById("letter-count");
+    if (!counter) return;
+
+    counter.innerText = `${value.length}/2000`;
+  });
+</script>

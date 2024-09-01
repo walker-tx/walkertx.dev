@@ -1,6 +1,6 @@
 ---
 testName: Sixteen Personalities
-description: Learn what really drives, inspires, and worries different personality types.
+description: Sixteen Personalities shows what really drives, inspires, and worries different personality types.
 link: https://www.16personalities.com/istp-personality
 ---
 
