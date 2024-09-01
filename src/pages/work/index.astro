@@ -51,15 +51,15 @@ const groups: Group[] = collection.reduce<Group[]>((acc, cur) => {
 <PageLayout title={WORK.TITLE} description={WORK.DESCRIPTION}>
   <Container>
     <div class="space-y-10">
-      <div class="animate font-semibold text-black dark:text-white text-2xl">Work History</div>
+      <div class="animate text-2xl font-semibold text-black dark:text-white">
+        Work History
+      </div>
       <ul class="flex flex-col gap-y-8">
         {
           groups.map(({ company, jobs, startDate, endDate }) => (
             <li class="animate">
-              <div class="flex flex-col sm:flex-row justify-between mb-2 text-black dark:text-white content-end">
-                <h5 class="font-semibold">
-                  {company}
-                </h5>
+              <div class="mb-2 flex flex-col content-end justify-between text-black dark:text-white sm:flex-row">
+                <h5 class="font-semibold">{company}</h5>
                 <div class="text-sm opacity-75">
                   {dateRange(startDate, endDate)}
                 </div>
@@ -78,14 +78,12 @@ const groups: Group[] = collection.reduce<Group[]>((acc, cur) => {
                         },
                       ]}
                     >
-                      <div class="h-2 w-2 rounded-full bg-black/75 dark:bg-white/75 absolute top-2 -left-[15px]" />
-                      <div class="font-semibold">
-                        {entry.data.role}
-                      </div>
+                      <div class="absolute -left-[15px] top-2 h-2 w-2 rounded-full bg-black/75 dark:bg-white/75" />
+                      <div class="font-semibold">{entry.data.role}</div>
                       <div class="text-sm opacity-75">
                         {dateRange(entry.data.dateStart, entry.data.dateEnd)}
                       </div>
-                      <div class="font-serif pt-2 prose dark:prose-invert">
+                      <div class="prose pt-2 font-serif dark:prose-invert">
                         <Content />
                       </div>
                     </li>
@@ -102,7 +100,7 @@ const groups: Group[] = collection.reduce<Group[]>((acc, cur) => {
 
 <style>
   .timelined {
-    @apply before:content-[''] before:absolute before:w-0.5 before:bg-black dark:before:bg-white before:opacity-50 before:-left-3 before:-bottom-1 before:h-[calc(100%-2rem)];
+    @apply before:absolute before:-bottom-1 before:-left-3 before:h-[calc(100%-2rem)] before:w-0.5 before:bg-black before:opacity-50 before:content-[''] dark:before:bg-white;
   }
 
   .timelined.last {
