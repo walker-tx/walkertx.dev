@@ -4,48 +4,108 @@ import PageLayout from "@layouts/PageLayout.astro";
 import Container from "@components/Container.astro";
 import { dateRange } from "@lib/utils";
 import { WORK } from "@consts";
+import type { CollectionEntry } from "astro:content";
 
-const collection = (await getCollection("work"))
-  .sort((a, b) => new Date(b.data.dateStart).valueOf() - new Date(a.data.dateStart).valueOf());
-
-const work = await Promise.all(
-  collection.map(async (item) => {
-    const { Content } = await item.render();
-    return { ...item, Content };
-  })
+const collection = (await getCollection("work")).sort(
+  (a, b) =>
+    new Date(b.data.dateStart).valueOf() - new Date(a.data.dateStart).valueOf(),
 );
+
+type Group = {
+  company: string;
+  startDate: Date;
+  endDate?: Date;
+  jobs: CollectionEntry<"work">[];
+};
+
+const groups: Group[] = collection.reduce<Group[]>((acc, cur) => {
+  const lastGroup = acc.at(-1);
+
+  if (!lastGroup || lastGroup.company !== cur.data.company) {
+    acc.push({
+      company: cur.data.company,
+      startDate: cur.data.dateStart,
+      endDate: cur.data.dateEnd,
+      jobs: [cur],
+    });
+
+    return acc;
+  }
+
+  lastGroup.jobs.push(cur);
+
+  if (cur.data.dateStart < lastGroup.startDate)
+    lastGroup.startDate = cur.data.dateStart;
+
+  if (
+    cur.data.dateEnd &&
+    lastGroup.endDate &&
+    cur.data.dateEnd > lastGroup.endDate
+  )
+    lastGroup.endDate = cur.data.dateEnd;
+
+  return acc;
+}, []);
 ---
 
 <PageLayout title={WORK.TITLE} description={WORK.DESCRIPTION}>
   <Container>
     <div class="space-y-10">
-      <div class="animate font-semibold text-black dark:text-white">
-        Work
-      </div>
-      <ul class="flex flex-col space-y-4">
-        { 
-          work.map(entry => (
+      <div class="animate font-semibold text-black dark:text-white text-2xl">Work History</div>
+      <ul class="flex flex-col gap-y-8">
+        {
+          groups.map(({ company, jobs, startDate, endDate }) => (
             <li class="animate">
-              <div class="text-sm opacity-75">
-                {dateRange(entry.data.dateStart, entry.data.dateEnd)}
+              <div class="flex flex-col sm:flex-row justify-between mb-2 text-black dark:text-white content-end">
+                <h5 class="font-semibold">
+                  {company}
+                </h5>
+                <div class="text-sm opacity-75">
+                  {dateRange(startDate, endDate)}
+                </div>
               </div>
-              <div class="font-semibold text-black dark:text-white">
-                {entry.data.company}
-              </div>
-              <div class="text-sm opacity-75">
-                {entry.data.role}
-              </div>
-              <article>
-                <entry.Content />
-              </article>
+              <ul class="flex flex-col gap-y-4 pl-4">
+                {jobs.map(async (entry, idx) => {
+                  const { Content } = await entry.render();
+
+                  return (
+                    <li
+                      class:list={[
+                        "relative text-black dark:text-white",
+                        {
+                          timelined: jobs.length > 1,
+                          last: idx === jobs.length - 1,
+                        },
+                      ]}
+                    >
+                      <div class="h-2 w-2 rounded-full bg-black/75 dark:bg-white/75 absolute top-2 -left-[15px]" />
+                      <div class="font-semibold">
+                        {entry.data.role}
+                      </div>
+                      <div class="text-sm opacity-75">
+                        {dateRange(entry.data.dateStart, entry.data.dateEnd)}
+                      </div>
+                      <div class="font-serif pt-2 prose dark:prose-invert">
+                        <Content />
+                      </div>
+                    </li>
+                  );
+                })}
+              </ul>
             </li>
           ))
         }
       </ul>
-<!-- 
-      <ul class="animate flex flex-col gap-4">
-
-      </ul> -->
     </div>
   </Container>
 </PageLayout>
+
+<style>
+  .timelined {
+    @apply before:content-[''] before:absolute before:w-0.5 before:bg-black dark:before:bg-white before:opacity-50 before:-left-3 before:-bottom-1 before:h-[calc(100%-2rem)];
+  }
+
+  .timelined.last {
+    @apply before:content-none;
+  }
+</style>
