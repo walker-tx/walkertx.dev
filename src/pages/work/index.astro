@@ -83,9 +83,7 @@ const groups: Group[] = collection.reduce<Group[]>((acc, cur) => {
                       <div class="text-sm opacity-75">
                         {dateRange(entry.data.dateStart, entry.data.dateEnd)}
                       </div>
-                      <div class="prose pt-2 font-serif dark:prose-invert">
-                        <Content />
-                      </div>
+                      <Content />
                     </li>
                   );
                 })}
@@ -99,11 +97,14 @@ const groups: Group[] = collection.reduce<Group[]>((acc, cur) => {
 </PageLayout>
 
 <style>
-  .timelined {
-    @apply before:absolute before:-bottom-1 before:-left-3 before:h-[calc(100%-2rem)] before:w-0.5 before:bg-black before:opacity-50 before:content-[''] dark:before:bg-white;
+  .timelined::before {
+    @apply content-[''];
+    @apply absolute -bottom-1 -left-3;
+    @apply h-[calc(100%-2rem)] w-0.5;
+    @apply bg-black opacity-50 before:bg-white;
   }
 
-  .timelined.last {
-    @apply before:content-none;
+  .timelined:last-child::before {
+    @apply content-none;
   }
 </style>

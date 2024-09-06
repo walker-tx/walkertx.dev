@@ -1,0 +1,100 @@
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "https://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg xmlns="http://www.w3.org/2000/svg" aria-label="Graph view" width="754" height="599"><g transform="translate(12,19.61328125)"><g class="nodes"><g class="node-container" transform="translate(364.59375,18.25)"><g class="node anchor"><circle class="shape" x="-15.86328125" y="-8.25" r="25.86328125"/><text class="label"><tspan xml:space="preserve" text-anchor="middle" alignment-baseline="central">Start</tspan></text></g></g><g class="node-container" transform="translate(364.59375,544.35400390625)"><g class="node anchor"><circle class="shape" x="-12.17578125" y="-8.25" r="22.17578125"/><text class="label"><tspan xml:space="preserve" text-anchor="middle" alignment-baseline="central">End</tspan></text></g></g><g class="node-container" transform="translate(364.59375,205.552001953125)"><g class="node state Parallel Container SucceededState" aria-label="State ParallelETL" data-virtual-tab-id="25" tabindex="0" transform="translate(-364.59375,-104.052001953125)"><rect class="shape" rx="5" ry="5" x="0" y="0" width="729.1875" height="268.10400390625" transform="translate(0,-20)"/><g class="branches" transform="translate(20,40)"><g class="branch" transform="translate(0,0)"><g class="nodes"><g class="node-container" transform="translate(162.00390625,18.2760009765625)"><g class="node state Task SucceededState" aria-label="State ConfigureAlgolia" data-virtual-tab-id="26" tabindex="-1" transform="translate(-8)"><rect class="shape step-status" rx="5" ry="5" x="-63.1796875" y="-18.2760009765625" width="142.359375" height="36.552001953125"/><text class="label" xml:space="preserve" text-anchor="middle" alignment-baseline="central">ConfigureAlgolia</text><svg class="icon" width="16" height="16" x="58.1796875" y="-8"><circle stroke="black" stroke-width="1" fill="none" cx="8" cy="8" r="7"/><path stroke="black" stroke-width="1" fill="none" d="m5 8 2 2 3.521-3.521"/></svg></g></g><g class="node-container" transform="translate(162.00390625,124.8280029296875)"><g class="node state Map Container SucceededState" aria-label="State BeerKnurdToAlgoliaForEachLocation" data-virtual-tab-id="27" tabindex="-1" transform="translate(-152.00390625,-63.2760009765625)"><rect class="shape" rx="5" ry="5" width="324.0078125" height="116.552001953125" transform="translate(-14,6)"/><rect class="shape" rx="5" ry="5" width="324.0078125" height="116.552001953125" transform="translate(-12,8)"/><rect class="shape" rx="5" ry="5" width="324.0078125" height="116.552001953125" transform="translate(-10,10)"/><g class="branches" transform="translate(20,70)"><g class="branch" transform="translate(0, 0)"><g class="nodes"><g class="node-container" transform="translate(132.00390625,18.2760009765625)"><g class="node state Task SucceededState" aria-label="State BeerKnurdToAlgoliaForOneLocation" data-virtual-tab-id="28" tabindex="-1" transform="translate(-8)"><rect class="shape step-status" rx="5" ry="5" x="-124.00390625" y="-18.2760009765625" width="264.0078125" height="36.552001953125"/><text class="label" xml:space="preserve" text-anchor="middle" alignment-baseline="central">BeerKnurdToAlgoliaForOneLocation</text><svg class="icon" width="16" height="16" x="119.00390625" y="-8"><circle stroke="black" stroke-width="1" fill="none" cx="8" cy="8" r="7"/><path stroke="black" stroke-width="1" fill="none" d="m5 8 2 2 3.521-3.521"/></svg></g></g></g><g class="edges"/></g></g><path class="path" marker-end="url(#arrowhead28)" d="M152.004,0L152.004,1.667C152.004,3.333,152.004,6.667,152.004,12.5C152.004,18.333,152.004,26.667,152.004,36.667C152.004,46.667,152.004,58.333,152.004,64.167L152.004,70" style="fill: none;"/><defs><marker id="arrowhead28" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z"/></marker></defs><g class="title node state SucceededState"><rect class="shape step-status" rx="5" ry="5" x="0" y="0" width="304.0078125" height="40" transform="translate(0)"/><text class="label" xml:space="preserve" text-anchor="middle" alignment-baseline="central" font-weight="600" x="304.0078125" y="10" transform="translate(-160.00390625)">BeerKnurdToAlgoliaForEachLocation</text><text class="desciption" xml:space="preserve" text-anchor="middle" alignment-baseline="central" x="304.0078125" y="30" transform="translate(-152.00390625)">Iteration #6</text><svg class="icon" width="16" height="16" xml:space="preserve" text-anchor="middle" alignment-baseline="central" x="272.98828125" y="3"><circle stroke="black" stroke-width="1" fill="none" cx="8" cy="8" r="7"/><path stroke="black" stroke-width="1" fill="none" d="m5 8 2 2 3.521-3.521"/></svg></g></g></g></g><g class="edges"><g class="edge"><path class="path" marker-end="url(#arrowhead29)" d="M162.004,36.552L162.004,38.635C162.004,40.719,162.004,44.885,162.004,49.052C162.004,53.219,162.004,57.385,162.004,59.469L162.004,61.552" style="fill: none;"/></g></g></g><g class="branch" transform="translate(348.0078125,0)"><g class="nodes"><g class="node-container" transform="translate(168.58984375,63.25)"><g class="node state Map Container SucceededState" aria-label="State UntappedToSupaBaseForEachLocation" data-virtual-tab-id="29" tabindex="-1" transform="translate(-158.58984375,-63.25)"><rect class="shape" rx="5" ry="5" width="337.1796875" height="116.5" transform="translate(-14,6)"/><rect class="shape" rx="5" ry="5" width="337.1796875" height="116.5" transform="translate(-12,8)"/><rect class="shape" rx="5" ry="5" width="337.1796875" height="116.5" transform="translate(-10,10)"/><g class="branches" transform="translate(20,70)"><g class="branch" transform="translate(0, 0)"><g class="nodes"><g class="node-container" transform="translate(138.58984375,18.25)"><g class="node state Task SucceededState" aria-label="State UntappedToSupaBaseForOneLocation" data-virtual-tab-id="30" tabindex="-1" transform="translate(-8)"><rect class="shape step-status" rx="5" ry="5" x="-130.58984375" y="-18.25" width="277.1796875" height="36.5"/><text class="label" xml:space="preserve" text-anchor="middle" alignment-baseline="central">UntappedToSupaBaseForOneLocation</text><svg class="icon" width="16" height="16" x="125.58984375" y="-8"><circle stroke="black" stroke-width="1" fill="none" cx="8" cy="8" r="7"/><path stroke="black" stroke-width="1" fill="none" d="m5 8 2 2 3.521-3.521"/></svg></g></g></g><g class="edges"/></g></g><path class="path" marker-end="url(#arrowhead30)" d="M158.59,0L158.59,1.667C158.59,3.333,158.59,6.667,158.59,12.5C158.59,18.333,158.59,26.667,158.59,36.667C158.59,46.667,158.59,58.333,158.59,64.167L158.59,70" style="fill: none;"/><defs><marker id="arrowhead30" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z"/></marker></defs><g class="title node state SucceededState"><rect class="shape step-status" rx="5" ry="5" x="0" y="0" width="317.1796875" height="40" transform="translate(0)"/><text class="label" xml:space="preserve" text-anchor="middle" alignment-baseline="central" font-weight="600" x="317.1796875" y="10" transform="translate(-166.58984375)">UntappedToSupaBaseForEachLocation</text><text class="desciption" xml:space="preserve" text-anchor="middle" alignment-baseline="central" x="317.1796875" y="30" transform="translate(-158.58984375)">Iteration #6</text><svg class="icon" width="16" height="16" xml:space="preserve" text-anchor="middle" alignment-baseline="central" x="285.26953125" y="3"><circle stroke="black" stroke-width="1" fill="none" cx="8" cy="8" r="7"/><path stroke="black" stroke-width="1" fill="none" d="m5 8 2 2 3.521-3.521"/></svg></g></g></g></g><g class="edges"/></g></g><g class="title node state SucceededState" transform="translate(344.59375,-40)"><rect class="shape step-status" rx="5" ry="5" x="0" y="0" width="116.609375" height="40" transform="translate(-38.3046875)"/><text class="label" xml:space="preserve" text-anchor="middle" alignment-baseline="central" font-weight="600" x="40" y="10" transform="translate(-28)">ParallelETL</text><text class="desciption" xml:space="preserve" text-anchor="middle" alignment-baseline="central" x="40" y="30" transform="translate(-20)">2 Branches</text><svg class="icon" width="16" height="16" xml:space="preserve" text-anchor="middle" alignment-baseline="central" x="57.3046875" y="3"><circle stroke="black" stroke-width="1" fill="none" cx="8" cy="8" r="7"/><path stroke="black" stroke-width="1" fill="none" d="m5 8 2 2 3.521-3.521"/></svg></g><path class="path" marker-end="url(#arrowhead31)" d="M364.594,0L364.594,3.333C364.594,6.667,364.594,13.333,334.162,16.667C303.73,20,242.867,20,212.436,23.333C182.004,26.667,182.004,33.333,182.004,36.667L182.004,40" style="fill: none;"/><defs><marker id="arrowhead31" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z"/></marker></defs><path class="path" marker-end="url(#arrowhead32)" d="M364.594,0L364.594,3.333C364.594,6.667,364.594,13.333,393.261,16.667C421.928,20,479.263,20,507.93,23.333C536.598,26.667,536.598,33.333,536.598,36.667L536.598,40" style="fill: none;"/><defs><marker id="arrowhead32" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z"/></marker></defs></g></g><g class="node-container" transform="translate(364.59375,437.85400390625)"><g class="node state Map Container SucceededState" aria-label="State SemanticMatchBrewsForEachLocation" data-virtual-tab-id="31" tabindex="-1" transform="translate(-156.76953125,-63.25)"><rect class="shape" rx="5" ry="5" width="333.5390625" height="116.5" transform="translate(-14,6)"/><rect class="shape" rx="5" ry="5" width="333.5390625" height="116.5" transform="translate(-12,8)"/><rect class="shape" rx="5" ry="5" width="333.5390625" height="116.5" transform="translate(-10,10)"/><g class="branches" transform="translate(20,70)"><g class="branch" transform="translate(0, 0)"><g class="nodes"><g class="node-container" transform="translate(136.76953125,18.25)"><g class="node state Task SucceededState" aria-label="State SemanticMatchBrewsForOneLocation" data-virtual-tab-id="32" tabindex="-1" transform="translate(-8)"><rect class="shape step-status" rx="5" ry="5" x="-128.76953125" y="-18.25" width="273.5390625" height="36.5"/><text class="label" xml:space="preserve" text-anchor="middle" alignment-baseline="central">SemanticMatchBrewsForOneLocation</text><svg class="icon" width="16" height="16" x="123.76953125" y="-8"><circle stroke="black" stroke-width="1" fill="none" cx="8" cy="8" r="7"/><path stroke="black" stroke-width="1" fill="none" d="m5 8 2 2 3.521-3.521"/></svg></g></g></g><g class="edges"/></g></g><path class="path" marker-end="url(#arrowhead33)" d="M156.77,0L156.77,1.667C156.77,3.333,156.77,6.667,156.77,12.5C156.77,18.333,156.77,26.667,156.77,36.667C156.77,46.667,156.77,58.333,156.77,64.167L156.77,70" style="fill: none;"/><defs><marker id="arrowhead33" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z"/></marker></defs><g class="title node state SucceededState"><rect class="shape step-status" rx="5" ry="5" x="0" y="0" width="313.5390625" height="40" transform="translate(0)"/><text class="label" xml:space="preserve" text-anchor="middle" alignment-baseline="central" font-weight="600" x="313.5390625" y="10" transform="translate(-164.76953125)">SemanticMatchBrewsForEachLocation</text><text class="desciption" xml:space="preserve" text-anchor="middle" alignment-baseline="central" x="313.5390625" y="30" transform="translate(-156.76953125)">Iteration #6</text><svg class="icon" width="16" height="16" xml:space="preserve" text-anchor="middle" alignment-baseline="central" x="281.79296875" y="3"><circle stroke="black" stroke-width="1" fill="none" cx="8" cy="8" r="7"/><path stroke="black" stroke-width="1" fill="none" d="m5 8 2 2 3.521-3.521"/></svg></g></g></g></g><g class="edges"><g class="edge"><path class="path" marker-end="url(#arrowhead34)" d="M364.594,349.604L364.594,351.687C364.594,353.771,364.594,357.937,364.594,362.104C364.594,366.271,364.594,370.437,364.594,372.521L364.594,374.604" style="fill: none;"/></g><g class="edge"><path class="path" marker-end="url(#arrowhead35)" d="M364.594,44.113L364.594,44.928C364.594,45.742,364.594,47.371,364.594,50.269C364.594,53.167,364.594,57.333,364.594,59.417L364.594,61.5" style="fill: none;"/></g><g class="edge"><path class="path" marker-end="url(#arrowhead36)" d="M364.594,501.104L364.594,503.187C364.594,505.271,364.594,509.437,364.594,512.95C364.594,516.462,364.594,519.32,364.594,520.749L364.594,522.178" style="fill: none;"/><defs><marker id="arrowhead36" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z"/></marker></defs></g></g></g><style xmlns="http://www.w3.org/1999/xhtml">
+  .link &gt; rect {
+    fill: #0073BB;
+  }
+
+  .link .label {
+    fill: #FFFFFF;
+  }
+
+  .node &gt; .shape {
+    stroke: #555555;
+    stroke-width: 0.6px;
+    fill: #FFFFFF;
+  }
+
+  path {
+    stroke: #555;
+    background-color: #555;
+    stroke-width: 1px;
+  }
+
+  .node.state.NotYetStarted &gt; .shape,
+  .node.state.Container &gt; .shape {
+    stroke-dasharray: 5 2;
+  }
+
+  .node.state.FailedState &gt; .shape,
+  rect.legend.FailedState {
+    fill: #DE322F;
+  }
+
+  .node.state.CaughtErrorState &gt; .shape,
+  rect.legend.CaughtErrorState {
+    fill: #FFA500;
+  }
+
+  .node.state.SucceededState &gt; .shape,
+  rect.legend.SucceededState {
+    fill: #2BD62E;
+  }
+
+  .node.state.InProgressState &gt; .shape,
+  rect.legend.InProgressState {
+    fill: #53c9ed;
+  }
+
+  .node.state.CancelledState &gt; .shape,
+  rect.legend.CancelledState {
+    fill: #dddddd;
+  }
+
+  .node.anchor &gt; .shape {
+    fill: #FFDA75;
+  }
+
+  .node.state.hovered:not(.selected):not(.NotYetStarted) &gt; .shape,
+  .node.selected &gt; .shape {
+    stroke: #555555;
+    stroke-width: 2px;
+  }
+
+  .node.state.Container.Failed &gt; .shape {
+    fill: #EE9592;
+  }
+
+  .node.state.Container.CaughtError &gt; .shape {
+    fill: #FFD27F;
+  }
+
+  .node.state.Container.Succeeded &gt; .shape {
+    fill: #91EA9A;
+  }
+
+  .node.state.Container.InProgress &gt; .shape {
+    fill :#A9E4F7;
+  }
+
+  .node.state.Container.Cancelled &gt; .shape {
+    fill: #EEEEEE;
+  }
+
+  marker {
+    fill: #555555;
+  }
+
+  .node.anchor,
+  .node.state.NotYetStarted {
+    cursor: default;
+  }
+
+  .node.state {
+    cursor: default;
+  }
+
+  tspan .label {
+    font-weight: normal;
+    font-size: 12px;
+    text-shadow: none;
+  }
+</style></svg>

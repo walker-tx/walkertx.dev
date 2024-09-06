@@ -1,0 +1,9 @@
+<content-wrapper>
+  <slot />
+</content-wrapper>
+
+<script>
+  class ContentWrapper extends HTMLElement {}
+
+  customElements.define("content-wrapper", ContentWrapper);
+</script>

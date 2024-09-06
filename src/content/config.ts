@@ -34,10 +34,21 @@ const projects = defineCollection({
   schema: z.object({
     title: z.string(),
     description: z.string(),
-    date: z.coerce.date(),
+    date: z.union([z.coerce.date(), z.literal("ongoing")]),
     draft: z.boolean().optional(),
-    demoURL: z.string().optional(),
-    repoURL: z.string().optional(),
+    demo: z.discriminatedUnion("available", [
+      z.object({
+        available: z.literal(true),
+        url: z.string().url(),
+      }),
+      z.object({
+        available: z.literal(false),
+      }),
+    ]),
+    repo: z.discriminatedUnion("public", [
+      z.object({ public: z.literal(true), url: z.string().url() }),
+      z.object({ public: z.literal(false) }),
+    ]),
   }),
 });
 

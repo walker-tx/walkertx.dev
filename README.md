@@ -22,7 +22,6 @@ It was designed as an even more minimal theme than my popular theme [Astro Spher
 - ✅ Animated UI
 - ✅ Tailwind styling
 - ✅ Auto generated sitemap
-- ✅ Auto generated RSS Feed
 - ✅ Markdown support
 - ✅ MDX Support (components in your markdown)
 
