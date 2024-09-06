@@ -7,7 +7,7 @@ import { admonishmentPlugin } from "./src/lib/remark-plugins/admonitions.mjs";
 import { setDefaultLayout } from "./src/lib/remark-plugins/default-layout.mjs";
 
 export default defineConfig({
-  site: process.env.URL,
+  site: "https://walkertx.dev",
   markdown: {
     remarkPlugins: [remarkDirective, admonishmentPlugin, setDefaultLayout],
   },
